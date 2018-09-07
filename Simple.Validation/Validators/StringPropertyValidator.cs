@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
 
 namespace Simple.Validation.Validators
 {
@@ -35,9 +33,8 @@ namespace Simple.Validation.Validators
 
         internal string GetValueToValidate(string value)
         {
-            if (String.IsNullOrWhiteSpace(value))
-                if (_ignoreWhiteSpace)
-                    return null;
+            if (String.IsNullOrWhiteSpace(value) && _ignoreWhiteSpace)
+                return null;
 
             if (_ignoreWhiteSpace)
                 return value.Trim();

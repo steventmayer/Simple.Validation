@@ -1,3 +1,7 @@
+-- Steven
+Forked off of Parametric's Simple.Validation adding support for NetStandard 2.0.  Removed support for Silverlight.
+Please see original repo for wiki.
+
 Run this from the Visual Studio Package Manager Console:
 
 Install-Package Simple.Validation
